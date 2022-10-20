@@ -5,7 +5,7 @@ import renderWithRouter from '../renderWithRouter';
 import { FavoritePokemons } from '../pages';
 import App from '../App';
 
-describe('Verifica o componente FavoritePokemon.js', () => {
+describe('3. Teste o componente <FavoritePokemons.js />', () => {
   test('Verifica se a mensagem de Not Found é exibida na tela', () => {
     renderWithRouter(<FavoritePokemons />);
 
@@ -17,7 +17,7 @@ describe('Verifica o componente FavoritePokemon.js', () => {
     expect(title).toHaveTextContent('Favorite pokémons');
   });
 
-  it('Verifica se são exibidos todos os cards de pokémons favoritados', () => {
+  test('Verifica se são exibidos todos os cards de pokémons favoritados', () => {
     const { history } = renderWithRouter(<App />);
 
     const moreDetails = screen.getByRole('link', { name: /more details/i });
